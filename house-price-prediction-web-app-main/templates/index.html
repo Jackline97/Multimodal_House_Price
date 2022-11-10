@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Prediction using Description data</title>
+</head>
+
+<center>  
+<body style="background: white;">
+    <div class="prediction">
+    <h1><img src="/static/house-for-sale.png" width = "50" alt="UottawaLogo"> Predict Ontario House Price with description text</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <textarea style="min-width:300px; max-width:50%;min-height:50px;height:100%;width:100%;font-size: 24pt" rows="6" cols="25" type="text" name="description" placeholder="Please enter the description text here." required="required">{{request.form.get("description") if request.form.get("description") is not none else ''}}</textarea><br><br><br><br>
+        <button style="height:50px;width:200px;font-size: 24pt" type="submit" class="btn btn-primary btn-block btn-large">Predict!</button>
+    </form>
+   <br>
+   <br>
+   <p style="font-size: 24pt"> {{ prediction_text }} </p>
+ </div>
+
+    <p style="font-size: 16pt; width: 52%;text-align:left">* This web app implements the Deep Neural Network model for the CSI 6900 Graduate Project titled "House Price Prediction using Text Mining with Neural Network and Gradient Boosting" by Hanxiang (Hanson) Zhang, with supervisor Paula Branco at the University of Ottawa.</p>
+
+    
+    <p style="font-size: 16pt; width: 52%;text-align:left">* The data used in the project is the house listings at Realtor.ca in May 2021 in five major Ontario cities including Ottawa, Toronto, Brampton, Mississauga and Hamilton. </p>
+    
+    <img src="/static/uottawa_ver_wg9.png" width = "60" alt="UottawaLogo">
+    <div style="font-size: 12pt;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </body>
+</center>       
+</html>
