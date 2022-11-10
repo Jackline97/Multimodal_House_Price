@@ -1,1 +1,0 @@
-["area", "province", "location", "plot", "hectare", "acre", "m²", "m2", "sq", "sale", "square", "meter", "metre", "feet", "foot", "room", "bedroom", "bathroom", "bath", "washroom", "dining", "living", "kitchen", "hallway", "corridor", "extra"]
